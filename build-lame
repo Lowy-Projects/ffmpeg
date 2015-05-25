@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd lame*
+./configure --prefix="/usr/local" --disable-shared --with-pic
+make
+sudo make install
+make distclean
+

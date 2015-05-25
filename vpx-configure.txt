@@ -1,0 +1,107 @@
+Usage: configure [options]
+Options:
+
+Build options:
+  --help                      print this message
+  --log=yes|no|FILE           file configure log is written to [config.log]
+  --target=TARGET             target platform tuple [generic-gnu]
+  --cpu=CPU                   optimize for a specific cpu rather than a family
+  --extra-cflags=ECFLAGS      add ECFLAGS to CFLAGS []
+  --enable-extra-warnings     emit harmless warnings (always non-fatal)
+  --enable-werror             treat warnings as errors, if possible
+                              (not available with all compilers)
+  --disable-optimizations     turn on/off compiler optimization flags
+  --enable-pic                turn on/off Position Independent Code
+  --enable-ccache             turn on/off compiler cache
+  --enable-debug              enable/disable debug mode
+  --enable-gprof              enable/disable gprof profiling instrumentation
+  --enable-gcov               enable/disable gcov coverage instrumentation
+  --enable-thumb              enable/disable building arm assembly in thumb mode
+
+Install options:
+  --enable-install-docs       control whether docs are installed
+  --disable-install-bins      control whether binaries are installed
+  --disable-install-libs      control whether libraries are installed
+  --enable-install-srcs       control whether sources are installed
+
+
+Advanced options:
+  --disable-libs                  libraries
+  --disable-examples              examples
+  --disable-docs                  documentation
+  --enable-unit-tests             unit tests
+  --libc=PATH                     path to alternate libc
+  --as={yasm|nasm|auto}           use specified assembler [auto, yasm preferred]
+  --sdk-path=PATH                 path to root of sdk (android builds only)
+  --disable-fast-unaligned        don't use unaligned accesses, even when
+                                  supported by hardware [auto]
+  --enable-codec-srcs             in/exclude codec library source code
+  --enable-debug-libs             in/exclude debug version of libraries
+  --disable-md5                   support for output of checksum data
+  --enable-static-msvcrt          use static MSVCRT (VS builds only)
+  --enable-vp8                    VP8 codec support
+  --enable-vp9                    VP9 codec support
+  --enable-internal-stats         output of encoder internal stats for debug, if supported (encoders)
+  --enable-mem-tracker            track memory usage
+  --enable-postproc               postprocessing
+  --enable-vp9-postproc           vp9 specific postprocessing
+  --disable-multithread           multithreaded encoding and decoding
+  --disable-spatial-resampling    spatial sampling (scaling) support
+  --enable-realtime-only          enable this option while building for real-time encoding
+  --enable-onthefly-bitpacking    enable on-the-fly bitpacking in real-time encoding
+  --enable-error-concealment      enable this option to get a decoder which is able to conceal losses
+  --enable-runtime-cpu-detect     runtime cpu detection
+  --enable-shared                 shared library support
+  --disable-static                static library support
+  --enable-small                  favor smaller size over speed
+  --enable-postproc-visualizer    macro block / block level visualizers
+  --enable-multi-res-encoding     enable multiple-resolution encoding
+  --disable-temporal-denoising    enable temporal denoising and disable the spatial denoiser
+
+Codecs:
+  Codecs can be selectively enabled or disabled individually, or by family:
+      --disable-<codec>
+  is equivalent to:
+      --disable-<codec>-encoder
+      --disable-<codec>-decoder
+
+  Codecs available in this distribution:
+           vp8:    encoder    decoder
+           vp9:    encoder    decoder
+
+
+NOTES:
+    Object files are built at the place where configure is launched.
+
+    All boolean options can be negated. The default value is the opposite
+    of that shown above. If the option --disable-foo is listed, then
+    the default value for foo is enabled.
+
+Supported targets:
+    armv5te-android-gcc      armv5te-linux-rvct       armv5te-linux-gcc       
+    armv5te-none-rvct       
+    armv6-darwin-gcc         armv6-linux-rvct         armv6-linux-gcc         
+    armv6-none-rvct         
+    armv7-android-gcc        armv7-darwin-gcc         armv7-linux-rvct        
+    armv7-linux-gcc          armv7-none-rvct          armv7-win32-vs11        
+    armv7-win32-vs12        
+    mips32-linux-gcc        
+    ppc32-darwin8-gcc        ppc32-darwin9-gcc        ppc32-linux-gcc         
+    ppc64-darwin8-gcc        ppc64-darwin9-gcc        ppc64-linux-gcc         
+    sparc-solaris-gcc       
+    x86-android-gcc          x86-darwin8-gcc          x86-darwin8-icc         
+    x86-darwin9-gcc          x86-darwin9-icc          x86-darwin10-gcc        
+    x86-darwin11-gcc         x86-darwin12-gcc         x86-darwin13-gcc        
+    x86-linux-gcc            x86-linux-icc            x86-os2-gcc             
+    x86-solaris-gcc          x86-win32-gcc            x86-win32-vs7           
+    x86-win32-vs8            x86-win32-vs9            x86-win32-vs10          
+    x86-win32-vs11           x86-win32-vs12          
+    x86_64-darwin9-gcc       x86_64-darwin10-gcc      x86_64-darwin11-gcc     
+    x86_64-darwin12-gcc      x86_64-darwin13-gcc      x86_64-linux-gcc        
+    x86_64-linux-icc         x86_64-solaris-gcc       x86_64-win64-gcc        
+    x86_64-win64-vs8         x86_64-win64-vs9         x86_64-win64-vs10       
+    x86_64-win64-vs11        x86_64-win64-vs12       
+    universal-darwin8-gcc    universal-darwin9-gcc    universal-darwin10-gcc  
+    universal-darwin11-gcc   universal-darwin12-gcc   universal-darwin13-gcc  
+    generic-gnu             
+

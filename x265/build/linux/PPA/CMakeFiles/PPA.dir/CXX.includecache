@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lowy/src/x265/source/PPA/ppa.cpp
+ppa.h
+/home/lowy/src/x265/source/PPA/ppa.h
+stdlib.h
+-
+ppaCPUEvents.h
+/home/lowy/src/x265/source/PPA/ppaCPUEvents.h
+windows.h
+-
+dlfcn.h
+-
+stdio.h
+-
+
+/home/lowy/src/x265/source/PPA/ppa.h
+ppaCPUEvents.h
+/home/lowy/src/x265/source/PPA/ppaCPUEvents.h
+ppaApi.h
+/home/lowy/src/x265/source/PPA/ppaApi.h
+
+/home/lowy/src/x265/source/PPA/ppaApi.h
+
+/home/lowy/src/x265/source/PPA/ppaCPUEvents.h
+

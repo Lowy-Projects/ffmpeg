@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd libvpx*
+./configure --prefix="/usr/local" --enable-pic
+make
+sudo make install
+make clean
+

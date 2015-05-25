@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd mstorsjo-fdk-aac*
+autoreconf -fiv
+./configure --prefix="/usr/local" --disable-shared --with-pic
+make
+sudo make install
+make distclean
+

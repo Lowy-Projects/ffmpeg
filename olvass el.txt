@@ -1,0 +1,23 @@
+				Ffmpeg és codec források.
+
+Evvel a győjetménnyel égy működő ffmpeg-et tudsz létrehozni. A mellékelt códekeket csak akkór kell lefórdítani,
+ha azoknak fejlesztői változata még nincs fent a gépen, vagy régebbi verzió. Linuxon az x265-ös kódek fordításához
+szükséges a yasm assembly fórdító is.
+A fórdítás során meg kell adni a root jelszót, a teleítéshez.
+Elöszőr a Kódekeket fordítsd le, és csak utánna az ffmpeg-et, a mellékel build-xxx futtatható állományok segítségével.
+
+A beállítások statikus lib kódot hoznak létre, kivétel az x265, az shared formában kell az ffmpeg-nek.
+
+A kódok a következő könyvtárakba kerűlnek:
+
+Linux rendszeren:
+     Statikus fordítások esetén:
+	Futtatható állományok:		/usr/local/bin
+	Fejléc állományok (.inc):	/usr/local/include
+	Lib állományok:			/usr/local/lib
+
+     Dinamikus fordításoknál (x265):
+	Futtatható állományok:		/usr/bin
+	Fejléc állományok (.inc):	/usr/include
+	Lib állományok:			/usr/lib
+

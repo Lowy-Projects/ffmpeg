@@ -1,0 +1,14 @@
+#!/bin/bash
+# Build al install zlib form ffmpeg project
+# By: Lowy
+
+cd ./zlib*
+
+PATH="$HOME/bin:$PATH" \
+./configure \
+  --prefix="/usr/local" 
+
+PATH="$HOME/bin:$PATH" make
+sudo make install
+make clean
+
