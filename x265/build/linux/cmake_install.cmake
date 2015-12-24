@@ -1,114 +1,77 @@
-# Install script for directory: /home/lowy/src/x265/source
+# Install script for directory: /home/lowy/src/ffmpeg/x265/source
 
 # Set the install prefix
-if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
-endif()
-string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  SET(CMAKE_INSTALL_PREFIX "/usr/local")
+ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
 # Set the install configuration name.
-if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
-  if(BUILD_TYPE)
-    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+IF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  IF(BUILD_TYPE)
+    STRING(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
-  else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
-  endif()
-  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
-endif()
+  ELSE(BUILD_TYPE)
+    SET(CMAKE_INSTALL_CONFIG_NAME "Release")
+  ENDIF(BUILD_TYPE)
+  MESSAGE(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+ENDIF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
 
 # Set the component getting installed.
-if(NOT CMAKE_INSTALL_COMPONENT)
-  if(COMPONENT)
-    message(STATUS "Install component: \"${COMPONENT}\"")
-    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
-  else()
-    set(CMAKE_INSTALL_COMPONENT)
-  endif()
-endif()
+IF(NOT CMAKE_INSTALL_COMPONENT)
+  IF(COMPONENT)
+    MESSAGE(STATUS "Install component: \"${COMPONENT}\"")
+    SET(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  ELSE(COMPONENT)
+    SET(CMAKE_INSTALL_COMPONENT)
+  ENDIF(COMPONENT)
+ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 # Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
+IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  SET(CMAKE_INSTALL_SO_NO_EXE "1")
+ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lowy/src/x265/build/linux/libx265.a")
-endif()
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lowy/src/ffmpeg/x265/build/linux/libx265.a")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/home/lowy/src/x265/source/x265.h"
-    "/home/lowy/src/x265/build/linux/x265_config.h"
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
+    "/home/lowy/src/ffmpeg/x265/source/x265.h"
+    "/home/lowy/src/ffmpeg/x265/build/linux/x265_config.h"
     )
-endif()
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libx265.so.60"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libx265.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      file(RPATH_CHECK
-           FILE "${file}"
-           RPATH "")
-    endif()
-  endforeach()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/lowy/src/x265/build/linux/libx265.so.60"
-    "/home/lowy/src/x265/build/linux/libx265.so"
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
+    "/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeRelink.dir/libx265.so.60"
+    "/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeRelink.dir/libx265.so"
     )
-  foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libx265.so.60"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libx265.so"
-      )
-    if(EXISTS "${file}" AND
-       NOT IS_SYMLINK "${file}")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/usr/bin/strip" "${file}")
-      endif()
-    endif()
-  endforeach()
-endif()
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lowy/src/x265/build/linux/x265.pc")
-endif()
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lowy/src/ffmpeg/x265/build/linux/x265.pc")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lowy/src/x265/build/linux/x265")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265")
-    file(RPATH_REMOVE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/x265")
-    endif()
-  endif()
-endif()
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeRelink.dir/x265")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lowy/src/x265/build/linux/encoder/cmake_install.cmake")
-  include("/home/lowy/src/x265/build/linux/common/cmake_install.cmake")
-  include("/home/lowy/src/x265/build/linux/test/cmake_install.cmake")
+  INCLUDE("/home/lowy/src/ffmpeg/x265/build/linux/encoder/cmake_install.cmake")
+  INCLUDE("/home/lowy/src/ffmpeg/x265/build/linux/common/cmake_install.cmake")
 
-endif()
+ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
-endif()
+IF(CMAKE_INSTALL_COMPONENT)
+  SET(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+ELSE(CMAKE_INSTALL_COMPONENT)
+  SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+ENDIF(CMAKE_INSTALL_COMPONENT)
 
-file(WRITE "/home/lowy/src/x265/build/linux/${CMAKE_INSTALL_MANIFEST}" "")
-foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "/home/lowy/src/x265/build/linux/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
-endforeach()
+FILE(WRITE "/home/lowy/src/ffmpeg/x265/build/linux/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/home/lowy/src/ffmpeg/x265/build/linux/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+ENDFOREACH(file)

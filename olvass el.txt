@@ -21,3 +21,16 @@ Linux rendszeren:
 	Fejléc állományok (.inc):	/usr/include
 	Lib állományok:			/usr/lib
 
+Fordításhoz szükséges csomagok:
+
+g++			x265
+yasm			x265
+cmake			x265
+ccmake			x265
+autoconf		fdk-aac
+libtool			fdk-aac
+libx11-dev		ffmpeg
+libxext-dev		ffmpeg
+libxfixes-dev		ffmpeg
+
+

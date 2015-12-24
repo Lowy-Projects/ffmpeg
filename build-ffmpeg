@@ -1,28 +1,29 @@
 #!/bin/sh
 #  --enable-libass \ nincs meg!!
 #  --enable-libfreetype  nincs meg !!
+#  --enable-libtheora \ nincs meg !!
+#  --enable-libvorbis \
+#  --enable-libx264 \
+#  --enable-libx265 \
 
 cd ./ffmpeg
 
 PATH="$HOME/bin:$PATH" \
-PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/lib/pkgconfig" \
+PKG_CONFIG_PATH="/usr/lib/pkgconfig:$PKG_CONFIG_PATH" \
 ./configure \
- --prefix="/usr/local" \
- --extra-cflags="-I/usr/local/include" \
- --extra-ldflags="-L/usr/local/lib -Bsybolic" \
+ --prefix="/usr" \
+ --extra-cflags="-I/usr/include" \
+ --extra-ldflags="-L/usr/lib -Bsybolic" \
  --bindir="/usr/local/bin" \
  --pkg-config="$PKG_CONFIG_PATH" \
+ --enable-shared \
  --enable-gpl \
  --enable-pic \
  --enable-libfdk-aac \
  --enable-libmp3lame \
- --enable-libtheora \
- --enable-libvorbis \
  --enable-libvpx \
- --enable-libx264 \
  --enable-nonfree \
  --enable-x11grab \
- --enable-libx265 \
  --disable-muxer=a64 \
  --disable-encoder=a64multi \
  --disable-encoder=a64multi5

@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/encoder.dir/analysis.cpp.o"
   "CMakeFiles/encoder.dir/search.cpp.o"
   "CMakeFiles/encoder.dir/bitcost.cpp.o"
@@ -20,6 +20,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/encoder.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/encoder.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

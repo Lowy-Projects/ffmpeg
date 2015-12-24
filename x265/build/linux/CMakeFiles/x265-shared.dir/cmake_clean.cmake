@@ -1,10 +1,13 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "libx265.pdb"
   "libx265.so"
   "libx265.so.60"
+  "libx265.pdb"
+  "CMakeFiles/CMakeRelink.dir/libx265.so"
+  "CMakeFiles/CMakeRelink.dir/libx265.so.60"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang)
-  include(CMakeFiles/x265-shared.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang)
+  INCLUDE(CMakeFiles/x265-shared.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

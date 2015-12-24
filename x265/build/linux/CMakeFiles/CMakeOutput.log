@@ -715,3 +715,62 @@ make[1]: Leaving directory '/home/lowy/src/x265/build/linux/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3384008266/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3384008266.dir/build.make CMakeFiles/cmTryCompileExec3384008266.dir/build
+make[1]: Entering directory `/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3384008266.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3384008266.dir/CheckIncludeFiles.c.o   -c /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3384008266
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3384008266.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3384008266.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3384008266 -rdynamic 
+make[1]: Leaving directory `/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp'
+
+
+Determining if the strtok_r exist passed with the following output:
+Change Dir: /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1086315633/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1086315633.dir/build.make CMakeFiles/cmTryCompileExec1086315633.dir/build
+make[1]: Entering directory `/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1086315633.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1086315633.dir/CheckSymbolExists.c.o   -c /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1086315633
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1086315633.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1086315633.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1086315633 -rdynamic 
+make[1]: Leaving directory `/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp'
+
+File /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtok_r
+  return ((int*)(&strtok_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if files getopt.h exist passed with the following output:
+Change Dir: /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3913998484/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3913998484.dir/build.make CMakeFiles/cmTryCompileExec3913998484.dir/build
+make[1]: Entering directory `/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3913998484.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3913998484.dir/CheckIncludeFiles.c.o   -c /home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3913998484
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3913998484.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3913998484.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec3913998484 -rdynamic 
+make[1]: Leaving directory `/home/lowy/src/ffmpeg/x265/build/linux/CMakeFiles/CMakeTmp'
+
+

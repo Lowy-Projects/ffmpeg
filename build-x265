@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ./x265
+cd x265/build/linux
 
 make
 sudo make install

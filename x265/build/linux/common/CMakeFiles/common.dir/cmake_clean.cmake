@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/common.dir/x86/pixel-a.asm.o"
   "CMakeFiles/common.dir/x86/const-a.asm.o"
   "CMakeFiles/common.dir/x86/cpu-a.asm.o"
@@ -51,6 +51,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang ASM_YASM CXX)
-  include(CMakeFiles/common.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang ASM_YASM CXX)
+  INCLUDE(CMakeFiles/common.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

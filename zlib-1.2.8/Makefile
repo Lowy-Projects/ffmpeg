@@ -45,7 +45,7 @@ TAR=tar
 SHELL=/bin/sh
 EXE=
 
-prefix =/home/lowy/lib-ffmpeg
+prefix =/usr/local
 exec_prefix =${prefix}
 libdir =${exec_prefix}/lib
 sharedlibdir =${libdir}

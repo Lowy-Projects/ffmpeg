@@ -1,7 +1,0 @@
-/home/lowy/src/x265/build/CMakeFiles/clean-generated.dir
-/home/lowy/src/x265/build/CMakeFiles/cli.dir
-/home/lowy/src/x265/build/common/CMakeFiles/common.dir
-/home/lowy/src/x265/build/encoder/CMakeFiles/encoder.dir
-/home/lowy/src/x265/build/CMakeFiles/uninstall.dir
-/home/lowy/src/x265/build/CMakeFiles/x265-shared.dir
-/home/lowy/src/x265/build/CMakeFiles/x265-static.dir
